@@ -49,12 +49,12 @@ stages:
       vmImage: 'windows-latest'
     steps:
 
-    - script: echo LOCATION $LOCATION
-    - script: echo RESOURCEGROUPNAME $RESOURCEGROUPNAME
-    - script: echo SQLSRVNAME $SQLSRVNAME
-    - script: echo DBNAME $DBNAME
-    - script: echo SVCPLANNAME $SVCPLANNAME
-    - script: echo WEBAPPNAME $WEBAPPNAME
+    - script: echo LOCATION $(LOCATION)
+    - script: echo RESOURCEGROUPNAME $(RESOURCEGROUPNAME)
+    - script: echo SQLSRVNAME $(SQLSRVNAME)
+    - script: echo DBNAME $(DBNAME)
+    - script: echo SVCPLANNAME $(SVCPLANNAME)
+    - script: echo WEBAPPNAME $(WEBAPPNAME)
     - script: echo USERNAME $(USERNAME)
     - script: echo PASSWORD $(PASSWORD)
     - task: AzureCLI@2
