@@ -6,7 +6,8 @@
 variables: 
 - group: AzureResourcesVariableGroup
 
-trigger: none
+trigger:
+- main
 
 stages:
 - stage: Build
@@ -75,7 +76,7 @@ stages:
     
     - script: echo build.artifactStagingDirectory $(build.artifactStagingDirectory)
     - script: echo System.ArtifactsDirectory $(System.ArtifactsDirectory)
-    - script: echo System.ArtifactsDirectory $(System.DefaultWorkingDirectory)
+    - script: echo System.DefaultWorkingDirectory $(System.DefaultWorkingDirectory)
     - task: DownloadBuildArtifacts@1
       inputs:
         buildType: 'current'
